@@ -1,0 +1,24 @@
+<h1>Burgers</h1>
+<div class="burgerContainer">
+    <div class="eaten">
+        <h2>Yet to be Tasted</h2>
+        {{#each burger}}
+        {{#unless eaten}}
+        {{> burgers/burger-block eaten=false}}
+        {{/unless}}
+        {{/each}}
+    </div>
+
+    <div class="uneaten">
+        <h2>Devoured</h2>
+        {{#each burger}}
+        {{#if eaten}}
+        {{> burgers/burger-block eaten=true}}
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
+<h3>Add a Burger</h3>
+
+<input id="burgerInput" type="text">
+<button id="submit">Submit</button>

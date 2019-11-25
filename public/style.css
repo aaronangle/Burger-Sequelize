@@ -1,0 +1,79 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+html,body{
+    margin:0;
+    padding: 0;
+    background-color: rgb(235, 203, 115);
+}
+.container{
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 251, 251);
+}
+.img{
+    height: 200px;
+}
+.spacer{
+    height: 50px;
+}
+.burgerContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.burgerdiv{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    margin: 20px;
+}
+h4{
+    margin:0;
+}
+.devourButton{
+    border-radius: 5px;
+    background-color: rgb(235, 203, 115);
+    border: solid 1px rgb(110, 110, 110);
+    padding: 5px;
+}
+#submit, .devourButton:hover{
+    cursor: pointer;
+}
+#submit{
+    border-radius: 5px;
+    background-color: rgb(235, 203, 115);
+    border: solid 1px rgb(110, 110, 110);
+    padding: 5px;
+    margin: 10px;
+}
+#burgerInput{
+    border-radius: 5px;
+    height: 50px;
+    width: 300px;
+    border: solid 2px rgb(110, 110, 110);
+}
+.note{
+    height: 30px;
+}
+.note:hover{
+    cursor: pointer;
+}
+.noteAppend{
+    height: 100px;
+    background-color: white;
+}
+.pencil{
+    height: 20px;
+}
+.pencil:hover{
+    cursor: pointer;
+}
