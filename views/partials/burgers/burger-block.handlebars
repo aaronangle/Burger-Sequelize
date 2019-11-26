@@ -1,8 +1,8 @@
 <div class="burgerdiv">
     <div class="burgerspan">
-        <h4>{{NAME}}</h4>
+        <h4>{{dataValues.name}}</h4>
     </div>
-    <div>{{#if eaten}}{{else}}<button class="devourButton" data-id="{{this.id}}">Devour</button>{{/if}}
+    <div>{{#if eaten}}{{else}}<button class="devourButton" data-id="{{dataValues.id}}">Devour</button>{{/if}}
     </div>
 
 </div>

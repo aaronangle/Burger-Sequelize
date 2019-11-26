@@ -1,9 +1,11 @@
 var db = require("../models");
+const express = require("express")
+const router = express.Router();
 
 router.get("/", function (req, res) {
     db.Burger.findAll({})
-        .then(function (dbBurger) {
-            res.render("index", { burger: dbBurger })
+        .then(function (burger) {
+            res.render("index", { burger })
         })
 })
 
@@ -11,20 +13,20 @@ router.post("/burger", function (req, res) {
     db.Burger.create({
         name: req.body.name,
         eaten: false
-    }).then(function (dbBurger) {
-        res.json(dbBurger)
+    }).then(function (burger) {
+        res.json(burger)
     })
 })
 
 router.put("/burger/:id", function (req, res) {
     db.Burger.update({
-        text: req.body.text
+        eaten: true
     }, {
         where: {
             id: req.params.id
         }
-    }).then(function (dbBurger) {
-        res.json(dbBurger)
+    }).then(function (burger) {
+        res.json(burger)
     })
     // const id = req.params.id
     // orm.update(id, function (err, result) {

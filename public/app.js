@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         ).then(data => {
             location.reload();
+            console.log(data)
         })
     });
     document.querySelectorAll(".devourButton").forEach(item => {
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 headers: { 'Content-type': 'application/json' }
             }).then(data => {
                 location.reload();
+                console.log(data)
             })
         })
     })
@@ -48,11 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     })
-    edit.addEventListener("click", function () {
-        fetch("/burgerdiv", {
-            method: "get"
-        }).then(data => {
-            location.reload()
-        })
-    })
+    // edit.addEventListener("click", function () {
+    //     fetch("/burgerdiv", {
+    //         method: "get"
+    //     }).then(data => {
+    //         location.reload()
+    //     })
+    // })
 });

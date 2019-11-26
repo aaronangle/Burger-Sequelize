@@ -1,5 +1,6 @@
 const express = require("express")
 const exphbs = require("express-handlebars")
+const db = require("./models")
 
 const PORT = process.env.PORT || 8080;
 
@@ -16,9 +17,12 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
-const routes = require("./controllers/routes.js");
+const routes = require("./routes/routes.js");
 app.use(routes);
 
-app.listen(PORT, function () {
-    console.log("listening " + PORT)
+db.sequelize.sync().then(function () {
+
+    app.listen(PORT, function () {
+        console.log("listening " + PORT)
+    })
 })
